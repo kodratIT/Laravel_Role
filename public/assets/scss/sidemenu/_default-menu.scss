@@ -1,0 +1,1410 @@
+@media (min-width: 992px) {
+    .app.sidenav-toggled {
+        .app-content {
+            margin-inline-start: 0;
+        }
+
+        .app-sidebar {
+            inset-inline-start: 230px;
+        }
+
+        .app-sidebar__overlay {
+            visibility: hidden;
+        }
+    }
+
+    .app-sidebar {
+        padding-block-start: 55px;
+    }
+
+    .side-header {
+        width: 270px;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        inset-block-start: 0;
+        position: fixed;
+        z-index: 99;
+        background: #fff;
+    }
+
+    .app.sidebar-mini.sidenav-toggled .side-header {
+        width: 80px !important;
+    }
+
+    .sidebar-mini footer.footer {
+        padding-block-start: 1.25rem;
+        padding-inline-end: 1.25rem;
+        padding-block-end: 1.25rem;
+        padding-inline-start: 270px;
+    }
+
+    .sidebar-mini.sidenav-toggled footer.footer {
+        padding: 1.25rem 1.25rem 1.25rem 80px;
+    }
+}
+
+@media (max-width: 991px) {
+    .app {
+        overflow-x: hidden;
+
+        .app-sidebar {
+            inset-inline-start: -270px;
+            inset-block-start: 70px;
+        }
+
+        .app-sidebar__overlay {
+            visibility: hidden;
+        }
+
+        &.sidenav-toggled {
+            .app-content {
+                margin-inline-start: 0;
+            }
+
+            .app-sidebar {
+                inset-inline-start: 0;
+            }
+
+            .app-sidebar__overlay {
+                visibility: visible;
+            }
+        }
+
+        &.sidebar-mini.sidebar-gone.sidenav-toggled .app-sidebar {
+            inset-inline-start: 0;
+        }
+
+        .app-header .header-brand1 {
+            width: inherit;
+            position: absolute;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+        }
+    }
+}
+
+.app-content {
+    min-height: calc(100vh - 50px);
+    margin-block-end: 0 !important;
+    -webkit-transition: margin-inline-start 450ms ease;
+    -o-transition: margin-inline-start 450ms ease;
+    transition: margin-inline-start 450ms ease;
+    overflow: clip;
+    margin-block-start: 74px;
+
+    .side-app {
+        padding: 0px 20px 0 20px;
+    }
+}
+
+.footer .container {
+    width: 100%;
+    padding-inline-end: 0.75rem;
+    padding-inline-start: 0.75rem;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+}
+
+@media (min-width: 992px) {
+    .app-content {
+        margin-inline-start: 270px;
+    }
+}
+
+@media (max-width: 991px) {
+    .app-content {
+        min-width: 100%;
+    }
+}
+
+@media print {
+    .app-content {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+}
+
+.app-header {
+    position: fixed;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 9999 !important;
+    border-block-end: 1px solid $border;
+    background: #ffffff;
+    transition: padding-inline-start 0.3s ease;
+}
+
+@media (min-width: 992px) {
+    .app-header {
+        padding-inline-end: 10px;
+        padding-inline-start: 285px;
+        z-index: 9 !important;
+    }
+}
+
+@media print {
+    .app-header {
+        display: none;
+    }
+}
+
+
+.app-sidebar__toggle {
+    color: $primary-1;
+    z-index: 1;
+    transition: padding-inline-start 0.3s ease;
+    padding: 0 9px;
+    text-align: center;
+    // height: 2.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    inset-inline-end: 7px;
+
+    &:before {
+        content: "\e907";
+        transition: all .25s;
+        font-size: 21px;
+        font-family: 'feather';
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        inset-block-start: 12px;
+        inset-block-end: 0;
+        border-radius: 50%;
+        inset-inline-end: 12px;
+        background: rgba($primary-1, 0);
+    }
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .app-sidebar__toggle {
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+    }
+}
+
+
+.app-sidebar {
+    position: fixed;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    color: $default-color;
+    z-index: 99;
+    background: $white;
+    -webkit-box-shadow: 0 8px 24px rgba(168, 180, 208, .1);
+    box-shadow: 0 8px 24px rgba(168, 180, 208, .1);
+    -webkit-transition: left 450ms ease, width 450ms ease;
+    transition: left 450ms ease, width 450ms ease;
+    -o-transition: left 450ms ease, width 450ms ease;
+    border-inline-end: 1px solid $border;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media print {
+    .app-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .app-sidebar__overlay {
+        position: fixed;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        inset-block-end: 0;
+        inset-inline-end: 0;
+        z-index: 9;
+    }
+}
+
+.side-menu {
+    margin-block-end: 0;
+    padding: 0 10px 0 10px;
+}
+
+.side-menu__item {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
+    -o-transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
+    transition: border-inline-start-color 0.3s ease, background-color 0.3s ease;
+    color: $default-color;
+    margin: 2px 0px;
+    white-space: nowrap;
+
+    &.active {
+        text-decoration: none;
+        color: $primary-1;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $primary-1;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $primary-1;
+
+        .side-menu__icon,
+        .side-menu__label {
+            color: $primary-1;
+        }
+    }
+}
+
+@media (min-width:992px) {
+    .app.sidebar-mini.sidenav-toggled .side-menu__label {
+        display: none !important;
+    }
+}
+
+.slide-item {
+
+    &.active,
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: #b5c1d2;
+    }
+}
+
+.slide-menu a.active {
+    color: $primary-1;
+}
+
+.slide-item {
+
+    &.active,
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $primary-1 !important;
+    }
+}
+
+.slide-menu li {
+    .slide-item {
+        &:before {
+            content: '\e048';
+            font-family: 'typicons';
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            inset-block-start: 0px;
+            font-size: 10px;
+            margin-inline-end: 7px;
+            color: #68798b;
+        }
+    }
+
+    position: relative;
+}
+
+.slide.is-expanded a {
+    text-decoration: none;
+}
+
+.side-menu .side-menu__icon {
+    color: $primary-1;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    margin-inline-end: 8px;
+    position: relative;
+}
+
+.side-menu__icon {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.side-menu__label {
+    white-space: nowrap;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-block-start: 3px;
+}
+
+.slide.is-expanded {
+    .slide-menu {
+        display: block;
+    }
+
+    .angle {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+.slide-menu {
+    display: none;
+    font-size: .7rem !important;
+    padding-inline-start: 30px;
+}
+
+.slide-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 8px 8px;
+    font-size: 13.3px;
+    color: #74829c;
+    white-space: nowrap;
+
+    .icon {
+        margin-inline-end: 5px;
+    }
+}
+
+.angle {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    margin-inline-end: 2px;
+    font-size: 11px;
+}
+
+@media (min-width: 992px) {
+    .sidebar-mini.sidenav-toggled {
+        .angle {
+            display: none;
+        }
+
+        .app-header.header {
+            padding-inline-start: 100px;
+        }
+
+        .side-menu {
+            padding: 0 0px 40px 0px;
+
+            .sub-category {
+                display: none;
+            }
+        }
+
+        .side-menu .side-menu__icon {
+            background: none !important;
+            box-shadow: none;
+            margin-inline-end: 0;
+        }
+
+        .side-badge,
+        .slide-menu open.slide-menu hide .side-badge {
+            display: none;
+        }
+
+        .side-menu {
+            margin-block-start: 20px;
+        }
+
+        .side-menu li .side-menu__item.active:before {
+            display: none;
+        }
+
+        .app-content {
+            margin-inline-start: 80px;
+        }
+
+        .app-sidebar {
+            inset-inline-start: 0;
+            width: 80px;
+            overflow: hidden;
+
+            &:hover {
+                overflow: visible;
+            }
+        }
+
+        .slide-menu {
+            position: absolute;
+            opacity: 0;
+            z-index: 9;
+            visibility: hidden;
+            -webkit-transition: visibility .3s ease;
+            -o-transition: visibility .3s ease;
+            transition: visibility .3s ease;
+        }
+    }
+
+    .app.sidebar-mini.sidenav-toggled {
+        .side-menu__item {
+            padding: 10px 30px;
+        }
+    }
+
+    .app.sidebar-mini.sidenav-toggled .nav-badge {
+        position: absolute;
+        inset-block-start: 8px;
+        inset-inline-end: 28px;
+        padding: 0.2rem 0.4rem;
+        font-size: 11px;
+    }
+
+    .sidebar-mini.sidenav-toggled.sidenav-toggled-open {
+        .app-sidebar {
+            width: 270px;
+        }
+
+        .side-header {
+            width: 270px !important;
+            display: flex !important;
+            padding: 17px 17px !important;
+        }
+
+        .light-logo,
+        .light-logo1,
+        .mobile-light {
+            display: none ! important;
+        }
+
+        .side-header .header-brand-img.light-logo1 {
+            display: block !important;
+        }
+
+        .side-menu__item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .side-menu .sub-category {
+            display: block;
+        }
+
+        .side-menu__icon {
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            margin-inline-end: 8px !important;
+        }
+
+        .side-menu__label {
+            display: block !important;
+            white-space: nowrap;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            margin-block-start: 3px;
+        }
+
+        .slide.is-expanded .slide-menu {
+            display: block !important;
+            position: unset;
+            inset-block-start: inherit;
+            min-width: 0;
+            width: 100%;
+            opacity: inherit;
+            visibility: inherit;
+        }
+
+        .side-menu {
+            margin-block-start: 20px !important;
+            padding: 0 10px 0 10px !important
+        }
+
+        .angle {
+            display: block;
+        }
+
+        .side-badge {
+            display: block;
+        }
+    }
+}
+
+.sidenav-toggled .main-wrapper .side-menu .side-menu__item {
+    .nav-badge {
+        position: absolute;
+        inset-block-start: 5px;
+        inset-inline-start: 57px;
+        display: block !important;
+        padding: 3px 5px !important;
+    }
+
+    .nav-badge1 {
+        display: none;
+    }
+}
+
+.nav-badge {
+    border-radius: 30px;
+    padding: 0.4em 0.6em;
+    font-size: 12px;
+}
+
+.side-header {
+    .header-brand1 {
+        text-align: center;
+        margin: 0 auto !important;
+    }
+
+    .header-brand-img.desktop-logo {
+        display: none;
+    }
+}
+
+.sidebar-mini.sidenav-toggled .app-sidebar .side-header .header-brand-img.desktop-logo {
+    display: none;
+}
+
+.side-header .header-brand-img {
+    &.toggle-logo {
+        display: none;
+    }
+
+    &.light-logo1 {
+        display: block !important;
+    }
+}
+
+.sidebar-mini.sidenav-toggled {
+    .app-sidebar .side-header .header-brand-img {
+        &.light-logo1 {
+            display: none !important;
+        }
+
+        &.toggle-logo {
+            display: none;
+            margin-inline-end: 0;
+        }
+    }
+
+    .sidebar-navs {
+        display: none;
+    }
+}
+
+.side-header {
+    display: flex;
+    border-block-end: 1px solid $border;
+    border-inline-end: 1px solid $border;
+    padding: 19px 17px;
+    align-items: center;
+    -webkit-transition: left 0.3s ease, width 450ms ease;
+    -o-transition: left 0.3s ease, width 450ms ease;
+    transition: left 0.3s ease, width 450ms ease;
+    height: 75px;
+
+    .header-brand-img {
+
+        &.toggle-logo,
+        &.light-logo {
+            height: 2.5rem;
+        }
+    }
+}
+
+.sidebar-mini.sidenav-toggled {
+    .app-sidebar__toggle {
+        padding-inline-start: 10px;
+    }
+}
+
+.side-menu .sub-category {
+    color: #74829c;
+    margin-block-end: 0.5rem;
+    padding-block-start: 12px;
+    padding-inline-end: 30px;
+    padding-block-end: 2px;
+    padding-inline-start: 20px;
+    margin-block-end: 0;
+    white-space: nowrap;
+    position: relative;
+
+    &:not(:first-child) {
+        margin-block-start: .75rem;
+    }
+
+    h3 {
+        margin-block-end: 0;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        font-size: 11px;
+        font-weight: 500;
+    }
+}
+
+.side-menu li:not(:first-child) h3 {
+    margin-block-start: 0rem;
+}
+
+@media (min-width: 991px) {
+    .sidenav-toggled .header-brand-img.light-logo {
+        display: block;
+        margin-inline-end: 0;
+    }
+}
+
+.side-badge,
+.slide-menu open.slide-menu hide .side-badge {
+    position: absolute;
+    inset-block-start: 18px;
+    inset-inline-end: 20px;
+    border-radius: 50px;
+    padding: 3px 6px 3px;
+}
+
+
+/*-- Subslide ---*/
+
+.sub-side-menu__item {
+    padding: 8px 8px;
+    font-size: 13px;
+    display: flex;
+    color: #74829c;
+
+    .sub-side-menu__label {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+}
+
+.slide-menu a:before {
+    content: '\e048';
+    margin-inline-end: 10px;
+    font-size: 11px;
+    position: relative;
+    font-family: typicons !important;
+    opacity: .6;
+    inset-block-start: 2px;
+}
+
+.sub-slide.is-expanded .sub-angle {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.sub-angle {
+    float: $float-right;
+    line-height: 40px;
+    margin-block-start: 5px;
+    margin-inline-end: 14px;
+    font-size: 12px;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    -o-transition: transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.sub-slide.is-expanded .sub-slide-menu {
+    display: block;
+}
+
+.sub-slide-menu {
+    display: none;
+    padding-block-start: 0px;
+    padding-inline-end: 15px;
+    padding-block-end: 15px;
+    padding-inline-start: 0px;
+    font-size: 13px !important;
+    list-style: none;
+}
+
+.sub-slide-item {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    padding-block-start: 8px !important;
+    padding-inline-end: 0px !important;
+    padding-block-end: 8px !important;
+    padding-inline-start: 24px !important;
+    color: #74829c;
+    font-size: 13.5px;
+}
+
+
+/*-- Subslide2 ---*/
+
+.sub-side-menu__item2 {
+    padding-block-start: 8px;
+    padding-inline-end: 0px;
+    padding-block-end: 8px;
+    padding-inline-start: 24px;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #74829c;
+    font-size: 12.5px;
+}
+
+.sub-slide2 .sub-side-menu__label2 {
+    flex: 1 1 auto;
+}
+
+.sub-angle2 {
+    float: $float-right;
+    line-height: 40px;
+    margin-block-start: -2px;
+    margin-inline-end: 3px;
+    font-size: 12px;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    -o-transition: transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.sub-slide2.is-expanded .sub-angle2 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.sub-slide2.is-expanded .sub-slide-menu2 {
+    display: block;
+}
+
+.sub-slide-menu2 {
+    display: none;
+    padding: 0;
+    font-size: .8rem !important;
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+.sub-slide-item2 {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    padding-block-start: 8px !important;
+    padding-inline-end: 0px !important;
+    padding-block-end: 8px !important;
+    padding-inline-start: 40px !important;
+    font-size: 12.5px;
+    color: #74829c;
+}
+
+@media (max-width: 991px) {
+    .header-brand1 .desktop-logo {
+        margin: 0 auto;
+        margin-block-start: 6px;
+    }
+}
+
+.app.sidebar-mini.sidenav-toggled .app-sidebar .side-header .header-brand-img.light-logo1 {
+    display: none !important;
+}
+
+.app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .app-sidebar .side-header .header-brand-img.light-logo1 {
+    display: block !important;
+}
+
+.side-menu-label1 {
+    display: none;
+}
+
+.app.sidebar-mini {
+    .hor-angle {
+        display: none;
+    }
+}
+
+.sidebar-mini .app-sidebar {
+    width: 270px;
+}
+
+@media (max-width: 991px) {
+    .sidebar-mini .app-header .light-logo1 {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 991.9px) {
+    .side-menu {
+        margin-inline-start: 0 !important;
+        margin-inline-end: 0 !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .app-sidebar__toggle {
+        padding-inline-start: 15px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .app.sidebar-mini.sidenav-toggled .side-menu__icon {
+        color: $default-color;
+    }
+
+    .app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .side-menu__icon {
+        color: $primary-1;
+    }
+}
+
+
+.sidetab-menu .menutabs-content,
+.sidetab-menu .tab-menu-heading {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .default-menu.app .app-sidebar .main-sidemenu #side2,
+    .default-menu.app .app-sidebar .main-sidemenu #side3,
+    .default-menu.app .app-sidebar .main-sidemenu #side4,
+    .default-menu.app .app-sidebar .main-sidemenu #side6,
+    .default-menu.app .app-sidebar .main-sidemenu #side7,
+    .default-menu.app .app-sidebar .main-sidemenu #side8,
+    .default-menu.app .app-sidebar .main-sidemenu #side10,
+    .default-menu.app .app-sidebar .main-sidemenu #side11,
+    .default-menu.app .app-sidebar .main-sidemenu #side12,
+    .default-menu.app .app-sidebar .main-sidemenu #side14,
+    .default-menu.app .app-sidebar .main-sidemenu #side15,
+    .default-menu.app .app-sidebar .main-sidemenu #side16,
+    .default-menu.app .app-sidebar .main-sidemenu #side18,
+    .default-menu.app .app-sidebar .main-sidemenu #side19,
+    .default-menu.app .app-sidebar .main-sidemenu #side20,
+    .default-menu.app .app-sidebar .main-sidemenu #side22,
+    .default-menu.app .app-sidebar .main-sidemenu #side23,
+    .default-menu.app .app-sidebar .main-sidemenu #side24,
+    .default-menu.app .app-sidebar .main-sidemenu #side26,
+    .default-menu.app .app-sidebar .main-sidemenu #side27,
+    .default-menu.app .app-sidebar .main-sidemenu #side28,
+    .default-menu.app .app-sidebar .main-sidemenu #side30,
+    .default-menu.app .app-sidebar .main-sidemenu #side31,
+    .default-menu.app .app-sidebar .main-sidemenu #side32,
+    .default-menu.app .app-sidebar .main-sidemenu #side34,
+    .default-menu.app .app-sidebar .main-sidemenu #side35,
+    .default-menu.app .app-sidebar .main-sidemenu #side36,
+    .default-menu.app .app-sidebar .main-sidemenu #side38,
+    .default-menu.app .app-sidebar .main-sidemenu #side39,
+    .default-menu.app .app-sidebar .main-sidemenu #side40,
+
+    .closed-menu.app .app-sidebar .main-sidemenu #side2,
+    .closed-menu.app .app-sidebar .main-sidemenu #side3,
+    .closed-menu.app .app-sidebar .main-sidemenu #side4,
+    .closed-menu.app .app-sidebar .main-sidemenu #side6,
+    .closed-menu.app .app-sidebar .main-sidemenu #side7,
+    .closed-menu.app .app-sidebar .main-sidemenu #side8,
+    .closed-menu.app .app-sidebar .main-sidemenu #side10,
+    .closed-menu.app .app-sidebar .main-sidemenu #side11,
+    .closed-menu.app .app-sidebar .main-sidemenu #side12,
+    .closed-menu.app .app-sidebar .main-sidemenu #side14,
+    .closed-menu.app .app-sidebar .main-sidemenu #side15,
+    .closed-menu.app .app-sidebar .main-sidemenu #side16,
+    .closed-menu.app .app-sidebar .main-sidemenu #side18,
+    .closed-menu.app .app-sidebar .main-sidemenu #side19,
+    .closed-menu.app .app-sidebar .main-sidemenu #side20,
+    .closed-menu.app .app-sidebar .main-sidemenu #side22,
+    .closed-menu.app .app-sidebar .main-sidemenu #side23,
+    .closed-menu.app .app-sidebar .main-sidemenu #side24,
+    .closed-menu.app .app-sidebar .main-sidemenu #side26,
+    .closed-menu.app .app-sidebar .main-sidemenu #side27,
+    .closed-menu.app .app-sidebar .main-sidemenu #side28,
+    .closed-menu.app .app-sidebar .main-sidemenu #side30,
+    .closed-menu.app .app-sidebar .main-sidemenu #side31,
+    .closed-menu.app .app-sidebar .main-sidemenu #side32,
+    .closed-menu.app .app-sidebar .main-sidemenu #side34,
+    .closed-menu.app .app-sidebar .main-sidemenu #side35,
+    .closed-menu.app .app-sidebar .main-sidemenu #side36,
+    .closed-menu.app .app-sidebar .main-sidemenu #side38,
+    .closed-menu.app .app-sidebar .main-sidemenu #side39,
+    .closed-menu.app .app-sidebar .main-sidemenu #side40,
+
+    .icontext-menu.app .app-sidebar .main-sidemenu #side2,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side3,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side4,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side6,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side7,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side8,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side10,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side11,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side12,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side14,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side15,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side16,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side18,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side19,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side20,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side22,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side23,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side24,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side26,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side27,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side28,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side30,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side31,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side32,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side34,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side35,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side36,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side38,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side39,
+    .icontext-menu.app .app-sidebar .main-sidemenu #side40,
+
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side2,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side3,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side4,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side6,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side7,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side8,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side10,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side11,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side12,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side14,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side15,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side16,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side18,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side19,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side20,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side22,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side23,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side24,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side26,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side27,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side28,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side30,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side31,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side32,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side34,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side35,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side36,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side38,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side39,
+    .sideicon-menu.app .app-sidebar .main-sidemenu #side40,
+
+    .hover-submenu.app .app-sidebar .main-sidemenu #side2,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side3,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side4,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side6,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side7,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side8,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side10,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side11,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side12,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side14,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side15,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side16,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side18,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side19,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side20,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side22,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side23,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side24,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side26,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side27,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side28,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side30,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side31,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side32,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side34,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side35,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side36,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side38,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side39,
+    .hover-submenu.app .app-sidebar .main-sidemenu #side40,
+
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side2,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side3,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side4,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side6,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side7,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side8,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side10,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side11,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side12,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side14,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side15,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side16,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side18,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side19,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side20,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side22,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side23,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side24,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side26,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side27,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side28,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side30,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side31,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side32,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side34,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side35,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side36,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side38,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side39,
+    .hover-submenu1.app .app-sidebar .main-sidemenu #side40,
+
+    .double-menu.app .app-sidebar .main-sidemenu #side2,
+    .double-menu.app .app-sidebar .main-sidemenu #side3,
+    .double-menu.app .app-sidebar .main-sidemenu #side4,
+    .double-menu.app .app-sidebar .main-sidemenu #side6,
+    .double-menu.app .app-sidebar .main-sidemenu #side7,
+    .double-menu.app .app-sidebar .main-sidemenu #side8,
+    .double-menu.app .app-sidebar .main-sidemenu #side10,
+    .double-menu.app .app-sidebar .main-sidemenu #side11,
+    .double-menu.app .app-sidebar .main-sidemenu #side12,
+    .double-menu.app .app-sidebar .main-sidemenu #side14,
+    .double-menu.app .app-sidebar .main-sidemenu #side15,
+    .double-menu.app .app-sidebar .main-sidemenu #side16,
+    .double-menu.app .app-sidebar .main-sidemenu #side18,
+    .double-menu.app .app-sidebar .main-sidemenu #side19,
+    .double-menu.app .app-sidebar .main-sidemenu #side20,
+    .double-menu.app .app-sidebar .main-sidemenu #side22,
+    .double-menu.app .app-sidebar .main-sidemenu #side23,
+    .double-menu.app .app-sidebar .main-sidemenu #side24,
+    .double-menu.app .app-sidebar .main-sidemenu #side26,
+    .double-menu.app .app-sidebar .main-sidemenu #side27,
+    .double-menu.app .app-sidebar .main-sidemenu #side28,
+    .double-menu.app .app-sidebar .main-sidemenu #side30,
+    .double-menu.app .app-sidebar .main-sidemenu #side31,
+    .double-menu.app .app-sidebar .main-sidemenu #side32,
+    .double-menu.app .app-sidebar .main-sidemenu #side34,
+    .double-menu.app .app-sidebar .main-sidemenu #side35,
+    .double-menu.app .app-sidebar .main-sidemenu #side36,
+    .double-menu.app .app-sidebar .main-sidemenu #side38,
+    .double-menu.app .app-sidebar .main-sidemenu #side39,
+    .double-menu.app .app-sidebar .main-sidemenu #side40 {
+        display: none !important;
+    }
+}
+
+.default-menu.app .app-sidebar .main-sidemenu #side2.active,
+.default-menu.app .app-sidebar .main-sidemenu #side3.active,
+.default-menu.app .app-sidebar .main-sidemenu #side4.active,
+.default-menu.app .app-sidebar .main-sidemenu #side6.active,
+.default-menu.app .app-sidebar .main-sidemenu #side7.active,
+.default-menu.app .app-sidebar .main-sidemenu #side8.active,
+.default-menu.app .app-sidebar .main-sidemenu #side10.active,
+.default-menu.app .app-sidebar .main-sidemenu #side11.active,
+.default-menu.app .app-sidebar .main-sidemenu #side12.active,
+.default-menu.app .app-sidebar .main-sidemenu #side14.active,
+.default-menu.app .app-sidebar .main-sidemenu #side15.active,
+.default-menu.app .app-sidebar .main-sidemenu #side16.active,
+.default-menu.app .app-sidebar .main-sidemenu #side18.active,
+.default-menu.app .app-sidebar .main-sidemenu #side19.active,
+.default-menu.app .app-sidebar .main-sidemenu #side20.active,
+.default-menu.app .app-sidebar .main-sidemenu #side22.active,
+.default-menu.app .app-sidebar .main-sidemenu #side23.active,
+.default-menu.app .app-sidebar .main-sidemenu #side24.active,
+.default-menu.app .app-sidebar .main-sidemenu #side26.active,
+.default-menu.app .app-sidebar .main-sidemenu #side27.active,
+.default-menu.app .app-sidebar .main-sidemenu #side28.active,
+.default-menu.app .app-sidebar .main-sidemenu #side30.active,
+.default-menu.app .app-sidebar .main-sidemenu #side31.active,
+.default-menu.app .app-sidebar .main-sidemenu #side32.active,
+.default-menu.app .app-sidebar .main-sidemenu #side34.active,
+.default-menu.app .app-sidebar .main-sidemenu #side35.active,
+.default-menu.app .app-sidebar .main-sidemenu #side36.active,
+.default-menu.app .app-sidebar .main-sidemenu #side38.active,
+.default-menu.app .app-sidebar .main-sidemenu #side39.active,
+.default-menu.app .app-sidebar .main-sidemenu #side40.active,
+
+.closed-menu.app .app-sidebar .main-sidemenu #side2.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side3.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side4.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side6.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side7.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side8.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side10.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side11.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side12.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side14.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side15.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side16.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side18.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side19.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side20.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side22.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side23.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side24.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side26.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side27.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side28.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side30.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side31.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side32.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side34.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side35.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side36.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side38.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side39.active,
+.closed-menu.app .app-sidebar .main-sidemenu #side40.active,
+
+.icontext-menu.app .app-sidebar .main-sidemenu #side2.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side3.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side4.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side6.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side7.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side8.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side10.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side11.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side12.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side14.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side15.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side16.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side18.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side19.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side20.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side22.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side23.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side24.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side26.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side27.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side28.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side30.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side31.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side32.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side34.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side35.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side36.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side38.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side39.active,
+.icontext-menu.app .app-sidebar .main-sidemenu #side40.active,
+
+.sideicon-menu.app .app-sidebar .main-sidemenu #side2.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side3.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side4.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side6.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side7.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side8.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side10.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side11.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side12.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side14.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side15.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side16.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side18.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side19.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side20.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side22.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side23.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side24.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side26.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side27.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side28.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side30.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side31.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side32.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side34.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side35.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side36.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side38.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side39.active,
+.sideicon-menu.app .app-sidebar .main-sidemenu #side40.active,
+
+.hover-submenu.app .app-sidebar .main-sidemenu #side2.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side3.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side4.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side6.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side7.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side8.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side10.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side11.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side12.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side14.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side15.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side16.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side18.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side19.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side20.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side22.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side23.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side24.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side26.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side27.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side28.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side30.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side31.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side32.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side34.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side35.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side36.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side38.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side39.active,
+.hover-submenu.app .app-sidebar .main-sidemenu #side40.active,
+
+.hover-submenu1.app .app-sidebar .main-sidemenu #side2.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side3.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side4.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side6.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side7.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side8.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side10.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side11.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side12.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side14.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side15.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side16.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side18.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side19.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side20.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side22.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side23.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side24.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side26.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side27.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side28.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side30.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side31.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side32.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side34.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side35.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side36.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side38.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side39.active,
+.hover-submenu1.app .app-sidebar .main-sidemenu #side40.active {
+    display: none !important;
+}
+
+
+.app .app-sidebar .main-sidemenu #side2.active,
+.app .app-sidebar .main-sidemenu #side3.active,
+.app .app-sidebar .main-sidemenu #side4.active,
+.app .app-sidebar .main-sidemenu #side6.active,
+.app .app-sidebar .main-sidemenu #side7.active,
+.app .app-sidebar .main-sidemenu #side8.active,
+.app .app-sidebar .main-sidemenu #side10.active,
+.app .app-sidebar .main-sidemenu #side11.active,
+.app .app-sidebar .main-sidemenu #side12.active,
+.app .app-sidebar .main-sidemenu #side14.active,
+.app .app-sidebar .main-sidemenu #side15.active,
+.app .app-sidebar .main-sidemenu #side16.active,
+.app .app-sidebar .main-sidemenu #side18.active,
+.app .app-sidebar .main-sidemenu #side19.active,
+.app .app-sidebar .main-sidemenu #side20.active,
+.app .app-sidebar .main-sidemenu #side22.active,
+.app .app-sidebar .main-sidemenu #side23.active,
+.app .app-sidebar .main-sidemenu #side24.active,
+.app .app-sidebar .main-sidemenu #side26.active,
+.app .app-sidebar .main-sidemenu #side27.active,
+.app .app-sidebar .main-sidemenu #side28.active,
+.app .app-sidebar .main-sidemenu #side30.active,
+.app .app-sidebar .main-sidemenu #side31.active,
+.app .app-sidebar .main-sidemenu #side32.active,
+.app .app-sidebar .main-sidemenu #side34.active,
+.app .app-sidebar .main-sidemenu #side35.active,
+.app .app-sidebar .main-sidemenu #side36.active,
+.app .app-sidebar .main-sidemenu #side38.active,
+.app .app-sidebar .main-sidemenu #side39.active,
+.app .app-sidebar .main-sidemenu #side40.active {
+    display: none !important;
+}
+
+.app .app-sidebar .main-sidemenu #side1,
+.app .app-sidebar .main-sidemenu #side5,
+.app .app-sidebar .main-sidemenu #side9,
+.app .app-sidebar .main-sidemenu #side13,
+.app .app-sidebar .main-sidemenu #side17,
+.app .app-sidebar .main-sidemenu #side21,
+.app .app-sidebar .main-sidemenu #side25,
+.app .app-sidebar .main-sidemenu #side29,
+.app .app-sidebar .main-sidemenu #side33,
+.app .app-sidebar .main-sidemenu #side37 {
+    display: block !important;
+
+    &.active {
+
+        display: block !important;
+    }
+
+    .sidemenu-list {
+        display: block !important;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .app .app-sidebar .main-sidemenu #side2,
+    .app .app-sidebar .main-sidemenu #side3,
+    .app .app-sidebar .main-sidemenu #side4,
+    .app .app-sidebar .main-sidemenu #side6,
+    .app .app-sidebar .main-sidemenu #side7,
+    .app .app-sidebar .main-sidemenu #side8,
+    .app .app-sidebar .main-sidemenu #side10,
+    .app .app-sidebar .main-sidemenu #side11,
+    .app .app-sidebar .main-sidemenu #side12,
+    .app .app-sidebar .main-sidemenu #side14,
+    .app .app-sidebar .main-sidemenu #side15,
+    .app .app-sidebar .main-sidemenu #side16,
+    .app .app-sidebar .main-sidemenu #side18,
+    .app .app-sidebar .main-sidemenu #side19,
+    .app .app-sidebar .main-sidemenu #side20,
+    .app .app-sidebar .main-sidemenu #side22,
+    .app .app-sidebar .main-sidemenu #side23,
+    .app .app-sidebar .main-sidemenu #side24,
+    .app .app-sidebar .main-sidemenu #side26,
+    .app .app-sidebar .main-sidemenu #side27,
+    .app .app-sidebar .main-sidemenu #side28,
+    .app .app-sidebar .main-sidemenu #side30,
+    .app .app-sidebar .main-sidemenu #side31,
+    .app .app-sidebar .main-sidemenu #side32,
+    .app .app-sidebar .main-sidemenu #side34,
+    .app .app-sidebar .main-sidemenu #side35,
+    .app .app-sidebar .main-sidemenu #side36,
+    .app .app-sidebar .main-sidemenu #side38,
+    .app .app-sidebar .main-sidemenu #side39,
+    .app .app-sidebar .main-sidemenu #side40 {
+        display: none !important;
+    }
+
+}

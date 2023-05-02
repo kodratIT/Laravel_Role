@@ -1,0 +1,239 @@
+/*!
+ * SmartWizard v4.3.x
+ * jQuery Wizard Plugin
+ * http://www.techlaboratory.net/smartwizard
+ *
+ * Created by Dipu Raj
+ * http://dipuraj.me
+ *
+ * Licensed under the terms of MIT License
+ * https://github.com/techlab/SmartWizard/blob/master/LICENSE
+ */
+
+/* SmartWizard Theme: Dots */
+
+.sw-theme-dots {
+    .sw-container {
+        min-height: 300px;
+    }
+
+    .step-content {
+        padding: 15px;
+        border: none;
+        background-color: #fff;
+        text-align: start;
+    }
+
+    .sw-toolbar {
+        background: #fff;
+        border-radius: 0 !important;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        margin-block-end: 0 !important;
+    }
+
+    .sw-toolbar-top {
+        border-block-end-color	: #ddd !important;
+    }
+
+    .sw-toolbar-bottom {
+        border-block-start-color: #ddd !important;
+        border-block-end-color	: #ddd !important;
+    }
+
+    > ul.step-anchor {
+        position: relative;
+        background: #fff;
+        border: 0px solid #313e6a !important;
+        list-style: none;
+        z-index: 5;
+
+        &:before {
+            content: " ";
+            position: absolute;
+            inset-block-start: 59px;
+            inset-block-end: 0;
+            inset-inline-start: 20px;
+            width: 96%;
+            height: 5px;
+            background-color: #ebeff8;
+            border-radius: 3px;
+            z-index: 9;
+        }
+
+        > li {
+            border: none;
+
+            > a {
+                position: relative;
+                text-align: center;
+                font-weight: bold;
+                background: transparent;
+                border: none;
+
+                /* color: #313e6a; */
+                text-decoration: none;
+                outline-style: none;
+                z-index: 9;
+                display: block;
+            }
+        }
+    }
+}
+
+/* Anchors styles */
+
+.step-anchor .nav-tabs .nav-item .nav-link {
+    color: #313e6a !important;
+}
+
+.sw-theme-dots {
+    > ul.step-anchor > li > a:before {
+        content: " ";
+        position: absolute;
+        inset-block-end: 14px;
+        inset-inline-start: 37%;
+        margin-block-start: 20px;
+        display: block;
+        border-radius: 50%;
+        color: $primary-1;
+        background: #ebeff8;
+        border: none;
+        width: 30px;
+        height: 30px;
+        text-decoration: none;
+        z-index: 98;
+    }
+
+    nav-tabs .nav-link:hover:not(.disabled) {
+        color: inherit;
+        background: transparent !important;
+    }
+
+    > ul.step-anchor > li {
+        > a {
+            &:after {
+                content: " ";
+                position: relative;
+                inset-inline-start: 36%;
+                inset-block-end: 5px;
+                margin-block-start: 24px;
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: #b4bdce;
+                border-radius: 50%;
+                z-index: 99;
+            }
+
+            &:hover {
+                color: #313e6a;
+                background: transparent;
+            }
+
+            &:focus {
+                color: #313e6a;
+                border: none;
+            }
+        }
+
+        &.clickable > a:hover {
+            color: #999;
+        }
+
+        &.active > a {
+            color: $primary-1;
+
+            &:hover {
+                border: none;
+            }
+
+            &:after {
+                background: $primary-1;
+            }
+        }
+
+        &.done > a {
+            color: #313e6a;
+
+            &:after {
+                background: #b3b7da;
+            }
+        }
+
+        &.danger > a {
+            color: #d5cef3;
+
+            &:after {
+                background: #d5cef3;
+            }
+        }
+
+        &.disabled > a {
+            color: #eee !important;
+
+            &:hover {
+                color: #eee !important;
+            }
+
+            &:after {
+                background: #eee;
+            }
+        }
+    }
+}
+
+/* Active anchors */
+
+/* Done anchors */
+
+/* Danger anchors */
+
+/* Responsive CSS */
+
+@media screen and (max-width: 480px) {
+    .sw-theme-dots {
+        > ul.step-anchor {
+            &:before {
+                inset-block-start: 0;
+                inset-block-end: 0;
+                inset-inline-start: 19px;
+                width: 5px;
+                height: 100%;
+                background-color: #f5f5f5;
+                display: block;
+                margin-inline-end: 10px;
+            }
+
+            > li {
+                margin-inline-start: 20px;
+                display: block;
+                clear: both;
+
+                > a {
+                    text-align: start;
+                    margin-inline-start: 0;
+                    display: block;
+
+                    &:before {
+                        inset-block-start: -8px;
+                        inset-inline-start: -14px;
+                        margin-inline-end: 10px;
+                        display: block;
+                    }
+
+                    &:after {
+                        inset-block-start: -40px;
+                        inset-inline-start: -36px;
+                        margin-inline-end: 10px;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .nav .nav-item {
+            width: 100%;
+        }
+    }
+}

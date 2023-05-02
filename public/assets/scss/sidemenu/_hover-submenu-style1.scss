@@ -1,0 +1,186 @@
+.hover-submenu1 {
+    @media (min-width: 992px) {
+
+        &.app.sidebar-mini.sidenav-toggled {
+
+            .side-menu__item:hover .side-menu__icon,
+            .side-menu__item:hover .side-menu__label,
+            .side-menu__item:focus .side-menu__icon,
+            .side-menu__item:focus .side-menu__label {
+                color: $primary-1 !important;
+            }
+
+            .app-header.header {
+                padding-inline-start: 130px;
+            }
+
+            .side-menu__icon {
+                color: $default-color;
+            }
+
+            .slide {
+                position: relative;
+                display: block;
+            }
+
+            .side-menu__label {
+                display: none !important;
+                font-size: 12px;
+                padding-block-start: 0px;
+                margin-block-start: 0;
+            }
+
+            .side-menu__item {
+                padding: 12px 5px;
+                text-align: center;
+                display: block;
+            }
+
+            .app-sidebar {
+                inset-inline-start: 0;
+                width: 120px;
+                overflow: hidden;
+                overflow: visible !important;
+                position: absolute !important;
+            }
+
+            .side-header {
+                width: 120px !important;
+            }
+
+            .app-content {
+                margin-inline-start: 120px;
+            }
+
+            .slide-menu {
+                max-height: inherit !important;
+                padding-block-end: 0 !important;
+                margin-block-start: 0 !important;
+                margin-block-end: 0 !important;
+                padding-block-start: 0 !important;
+                height: auto !important;
+                overflow: hidden !important;
+                box-shadow: 8px 8px 17px $black-1;
+                transition: none !important;
+                background: $white;
+            }
+
+            .app-sidebar .side-header .header-brand-img.toggle-logo {
+                display: none;
+                margin-inline-end: 0;
+            }
+
+            .side-badge {
+                display: none;
+            }
+
+            .slide-menu {
+                display: none;
+                padding: 0px;
+                font-size: 0.7rem !important;
+                padding-inline-start: 3px;
+            }
+
+            .side-menu__item:hover,
+            .side-menu__item:focus {
+                color: $primary-1;
+            }
+
+            .side-menu-label1 a:before {
+                content: "";
+                inset-block-start: -1px;
+            }
+
+            .slide-menu .side-menu-label1 a {
+                color: $default-color;
+            }
+
+            &.sidenav-toggled-open {
+                .app-sidebar {
+                    width: 120px;
+                }
+
+                .side-menu__icon {
+                    margin-inline-end: 0 !important;
+                }
+
+                .side-badge {
+                    display: none;
+                }
+
+                .angle {
+                    display: none;
+                }
+
+                .side-menu .sub-category {
+                    display: none;
+                }
+
+                .side-header .header-brand-img.light-logo1 {
+                    display: none !important;
+                }
+
+                .side-header .header-brand-img.light-logo {
+                    display: block !important;
+                }
+
+                .side-menu__item {
+                    display: block;
+                    padding: 12px 5px;
+                    text-align: center;
+                }
+
+                .side-menu__label {
+                    display: none !important;
+                    font-size: 12px;
+                    padding-block-start: 0px;
+                    margin-block-start: 0;
+                }
+
+                .side-header {
+                    width: 120px !important;
+                    display: flex !important;
+                    padding: 19px 17px !important;
+                }
+
+                .side-menu__item {
+                    display: block;
+                    padding: 12px 5px;
+                    text-align: center;
+                }
+
+                .slide:hover .slide-menu {
+                    visibility: visible;
+                    display: block !important;
+                    height: auto !important;
+                }
+
+                .slide .slide-menu {
+                    position: absolute;
+                    inset-inline-start: 108px;
+                    min-width: 180px;
+                    opacity: 1;
+                    z-index: 9999;
+                    visibility: hidden;
+                    inset-block-start: 0;
+                    display: block;
+                }
+
+                .slide .slide-menu {
+                    border-radius: 0px 6px 6px 0px !important;
+                }
+
+                .side-menu-label1 {
+                    display: block;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border-block-end: 1px solid $border;
+                    padding: 10px 15px !important;
+                    color: $default-color;
+                    margin-block-end: 6px;
+                }
+            }
+        }
+
+    }
+}

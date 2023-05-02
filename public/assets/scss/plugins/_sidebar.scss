@@ -1,0 +1,194 @@
+/* All the default sidebar styles */
+/* toggle button settings */
+/* Note: this disables the navbar-toggle class's hide function. set visibility with the boostrap visible/hidden classes */
+/* Note: this also disables the navbar-header class positioning settings in small screens. */
+
+.navbar {
+    &.navbar-static .navbar-header {
+        float: $float-left;
+    }
+
+    .navbar-toggle {
+        &.toggle-left {
+            float: $float-left;
+            margin-inline-start: 15px;
+        }
+
+        &.toggle-right {
+            float: $float-right;
+            margin-inline-end: 15px;
+        }
+
+        &.toggle-sidebar {
+            display: block;
+        }
+    }
+}
+
+[data-toggle="sidebar"] {
+    display: block;
+}
+
+/* sidebar settings */
+
+.sidebar {
+    position: fixed;
+    display: block;
+    inset-block-start: 0;
+    width: 300px;
+    inset-block-end: 0;
+    z-index: 9999;
+    min-height: 100%;
+    max-height: none;
+    overflow: auto;
+    background-color: #fff;
+
+    /* border-inline-end: 1px solid #eee; */
+    border: 1px solid $border;
+    box-shadow: 0px 8px 14.72px 1.28px rgba(229, 228, 230, 0.5);
+}
+
+.sidebar-left {
+    inset-inline-start: 0;
+}
+
+.sidebar-right {
+    inset-inline-end: 0;
+}
+
+/* css to override hiding the sidebar according to different screen sizes */
+
+.row .sidebar {
+    &.sidebar-left.sidebar-xs-show {
+        inset-inline-start: 0;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    &.sidebar-right.sidebar-xs-show {
+        inset-inline-end: 0;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+/*right sidebar is untested */
+
+@media (min-width: 768px) {
+    .row .sidebar {
+        &.sidebar-left.sidebar-sm-show {
+            inset-inline-start: 0;
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        &.sidebar-right.sidebar-sm-show {
+            inset-inline-end: 0;
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+
+    /*right sidebar is untested */
+}
+
+@media (min-width: 992px) {
+    .row .sidebar {
+        &.sidebar-left.sidebar-md-show {
+            inset-inline-start: 0;
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        &.sidebar-right.sidebar-md-show {
+            inset-inline-end: 0;
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+}
+
+@media (min-width: 1170px) {
+    .row .sidebar {
+        &.sidebar-left.sidebar-lg-show {
+            inset-inline-start: 0;
+            -webkit-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        &.sidebar-right.sidebar-lg-show {
+            inset-inline-end: 0;
+            -webkit-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+}
+
+/* animation class - optional: without it the sidebar would just pop in and out*/
+
+.sidebar-animate {
+    -webkit-transition: -webkit-transform 300ms ease;
+    -moz-transition: -moz-transform 300ms ease;
+    -o-transition: transform 300ms ease;
+    transition: transform 300ms ease;
+}
+
+/* Left panel positioning classes */
+
+.sidebar {
+    &.sidebar-left {
+        -webkit-transform: translate(-100%, 0);
+        -moz-transform: translate(-100%, 0);
+        -ms-transform: translate(-100%, 0);
+        -o-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+
+        &.sidebar-open {
+            -webkit-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0) !important;
+        }
+    }
+
+    &.sidebar-right {
+        -webkit-transform: translate(100%, 0);
+        -moz-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        -o-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+
+        &.sidebar-open {
+            -webkit-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0) !important;
+        }
+    }
+}

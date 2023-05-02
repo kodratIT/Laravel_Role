@@ -1,0 +1,320 @@
+body.rtl {
+    direction: rtl;
+}
+
+.rtl {
+    .fe-chevron-right:before {
+        content: "\e92e";
+    }
+
+    .fe-chevron-left:before {
+        content: "\e92f";
+    }
+
+    // Sidebar //
+    .sidebar.sidebar-right {
+        transform: translate(-100%, 0);
+    }
+
+    .slide-menu li .slide-item:before {
+        content: "\e046";
+    }
+
+    .fc-direction-ltr {
+        direction: rtl;
+    }
+
+    .fc-icon-chevron-right {
+        transform: rotate(180deg);
+    }
+
+    .fc-icon-chevron-left {
+        transform: rotate(-180deg);
+    }
+
+    .join {
+        transform: rotate(180deg);
+    }
+
+    .dTree .plus {
+        transform: rotate(180deg);
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+        direction: rtl;
+    }
+
+
+    [type="email"],
+    [type="number"],
+    [type="tel"],
+    [type="url"] {
+        direction: rtl;
+    }
+
+    .fa.fa-angle-right {
+        transform: rotate(180deg);
+    }
+
+    .fa.fa-angle-left {
+        transform: rotate(180deg);
+    }
+
+    .fa.fa-angle-double-right {
+        transform: rotate(180deg);
+    }
+
+    .fa.fa-angle-double-left {
+        transform: rotate(180deg);
+    }
+
+    .active.carousel-item-start,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(100%) !important;
+    }
+
+    .active.carousel-item-end {
+        transform: translateX(-100%) !important;
+    }
+
+    .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(-100%) !important;
+        transform: translateX(-100%) !important;
+    }
+
+    .ms-search input {
+        padding: 0 5px 0 20px;
+    }
+
+    .ion-chevron-right {
+        transform: rotate(180deg);
+    }
+
+    .fc .fc-scroller-harness {
+        direction: rtl;
+    }
+
+
+    .fe-chevron-inset-inline-end:before {
+        content: "\e92e";
+    }
+
+    &.hover-submenu .slide-menu li .slide-item:before {
+        content: "\e046";
+    }
+
+    &.hover-submenu .slide-menu a:before {
+        content: "\e046";
+    }
+
+    &.icontext-menu .slide-menu li .slide-item:before {
+        content: "\e046";
+    }
+
+    &.icontext-menu .slide-menu a:before {
+        content: "\e046";
+    }
+
+    &.closed-leftmenu .slide-menu a:before {
+        content: "\e046";
+    }
+
+    &.closed-leftmenu .slide-menu li .slide-item:before {
+        content: "\e046";
+    }
+
+    &.hover-submenu1 .slide-menu li .slide-item:before {
+        content: "\e046";
+    }
+
+    &.hover-submenu1 .slide-menu a:before {
+        content: "\e046";
+    }
+
+    &.horizontal {
+        .main-sidemenu i.angle {
+            transform: rotate(270deg);
+        }
+
+        .main-sidemenu .slide.is-expanded i.angle {
+            transform: rotate(90deg);
+        }
+    }
+
+    @media (min-width: 768px) {
+        &.horizontal .main-sidemenu .slide-right {
+            transform: rotate(180deg);
+        }
+
+        &.horizontal .main-sidemenu .slide-left {
+            transform: rotate(180deg);
+        }
+    }
+
+    .power-ribbone-top-left {
+        span {
+            transform: rotate(45deg);
+
+            i {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .power-ribbone-bottom-left {
+        span {
+            transform: rotate(-45deg);
+
+            i {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .power-ribbone-top-right {
+        span {
+            transform: rotate(-45deg);
+
+            i {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .power-ribbone-bottom-right {
+        span {
+            transform: rotate(45deg);
+
+            i {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .ribbone-top-left {
+        span {
+            transform: rotate(45deg);
+        }
+    }
+
+    .ribbone-top-right {
+        span {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .ribbon-price .badge {
+        transform: rotate(-45deg);
+    }
+
+
+    .slide.is-expanded .angle {
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .dropdown-menu {
+        --bs-position: end;
+    }
+
+    .lg-actions .lg-next,
+    .lg-actions .lg-prev {
+        transform: rotate(180deg);
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        transform: rotate(180deg);
+    }
+
+    .breadcrumb-style3 .breadcrumb-item1+.breadcrumb-item1::before,
+    .breadcrumb-style2 .breadcrumb-item1+.breadcrumb-item1::before,
+    .handle-counter .counter-plus,
+    .handle-counter .counter-minus,
+    div.dt-datetime div.dt-datetime-iconRight,
+    div.dt-datetime div.dt-datetime-iconLeft {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu-arrow:before {
+        transform: rotate(-45deg);
+    }
+
+    .sidebar-right {
+        .panel-tabs {
+            li {
+                a {
+                    display: inline-flex;
+
+                    i {
+                        margin-block-start: 0.25rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .slide-menu a:before {
+        content: "\e046";
+    }
+
+    .leaflet-pane,
+    .leaflet-tile,
+    .leaflet-marker-icon,
+    .leaflet-marker-shadow,
+    .leaflet-tile-container {
+        inset-inline-end: 0;
+        inset-inline-start: auto;
+    }
+
+    .select2-container--open .select2-dropdown {
+        direction: ltr;
+        text-align: end;
+    }
+
+    .sp-container {
+        direction: ltr;
+    }
+
+    .select2-container {
+        direction: rtl;
+    }
+
+    .tab_wrapper .content_wrapper .accordian_header.active .arrow {
+        transform: rotate(-45deg);
+    }
+
+    .bs-tooltip-start .tooltip-arrow::before,
+    .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before,
+    .bs-tooltip-end .tooltip-arrow::before,
+    .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before,
+    .bs-popover-end .popover-arrow::before,
+    .bs-popover-auto[data-popper-placement^=right] .popover-arrow::before,
+    .bs-popover-end .popover-arrow::after,
+    .bs-popover-auto[data-popper-placement^=right] .popover-arrow::after,
+    .bs-popover-start .popover-arrow::before,
+    .bs-popover-auto[data-popper-placement^=left] .popover-arrow::before,
+    .bs-popover-start .popover-arrow::after,
+    .bs-popover-auto[data-popper-placement^=left] .popover-arrow::after {
+        transform: rotate(180deg);
+    }
+
+    .fr-box.fr-basic.fr-top .fr-wrapper {
+        direction: rtl;
+
+        .fr-view {
+
+            direction: rtl;
+        }
+    }
+}
+
+
+.rtl {
+    --float-right: left;
+    --float-left: right;
+}

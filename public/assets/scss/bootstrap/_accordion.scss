@@ -1,0 +1,107 @@
+/*------ Accordion -------*/
+
+.accordion .card {
+    &:not(:first-of-type) {
+        &:not(:last-of-type) {
+            border-block-end: 0;
+            border-radius: 0;
+        }
+        .card-header:first-child {
+            border-radius: 0;
+        }
+    }
+    &:first-of-type {
+        border-block-end: 0;
+        border-end-end-radius: 0;
+        border-end-start-radius: 0;
+    }
+    &:last-of-type {
+        border-start-start-radius: 0;
+        border-start-end-radius: 0;
+    }
+}
+
+.accordionjs .acc_section .acc_head h3 {
+    &:before {
+        color: #76839a;
+    }
+    font-weight: 400 !important;
+}
+
+
+/* #accordion rotate icon option */
+
+#accordion .panel-heading1 {
+    a:before {
+        content: "\f01a";
+        font-size: 24px;
+        position: absolute;
+        font-family: 'FontAwesome';
+        inset-inline-end: 5px;
+        inset-block-start: 10px;
+        transform: rotate(180deg);
+        transition: all 0.5s;
+    }
+    &.active a:before {
+        transform: rotate(0deg);
+        transition: all 0.5s;
+    }
+}
+
+.accordionjs .acc_section.acc_active>.acc_head {
+    color: $white!important;
+}
+
+.accordion-wizard .badge-pill {
+    padding-inline-end: .6em;
+    padding-inline-start: .6em;
+    border-radius: 0;
+}
+
+.accordion-item {
+    border: 1px solid $border;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: $border;
+}
+
+.accordion-button:not(.collapsed) {
+    color: $primary-1;
+    box-shadow: none;
+    background: #f6f6fb;
+}
+
+.accordion-button.collapsed {
+    background: transparent;
+    box-shadow: none;
+}
+
+.accordion-button {
+    font-size: 14px;
+    padding: 15px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    margin-inline-end: 5px;
+}
+
+.accordion-button::after {
+    background-image: none;
+    content: "\e92d";
+    font-family: feather!important;
+}
+
+#accordion .panel-default>.panel-heading {
+    border: 0px solid $border;
+}
+
+#accordion .panel-default .collapsing .panel-body {
+    border-block-start: 0px solid transparent;
+}
+
+.accordion-button::after {
+    height: 14px;
+}

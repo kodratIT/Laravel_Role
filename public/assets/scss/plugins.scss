@@ -1,0 +1,133 @@
+/*------------------------------------------------------------------
+[Plugins Stylesheet]
+
+Project        :   sash – Bootstrap 5  Admin & Dashboard Template
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   Spruko
+Author URL     :   https://themeforest.net/user/spruko
+Support	       :   support@spruko.com
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+/*
+--- accordion
+--- bootstrap-datepicker
+--- buttons.bootstrap5
+--- c3-chart
+--- calendar
+--- classic
+--- dataTables.bootstrap
+--- date-picker
+--- daterangepicker
+--- dtree
+--- edit-table
+--- fancy_fileupload
+--- fileupload
+--- form-wizard-demo
+--- fullcalendar
+--- gallery
+--- intlTelInput
+--- ion.rangeSlider
+--- ion.rangeSlider.skinFlat
+--- ion.rangeSlider.skinSimple
+--- jquery.countdown
+--- jquery.growl
+--- jquery.timepicker
+--- jquery.transfer
+--- jquery-jvectormap
+--- jquerysctipttop
+--- jquerytransfer-icon_font
+--- jquery-ui
+--- leaflet
+--- monolith
+--- morris
+--- multi
+--- multiple-select
+--- nano
+--- notifIt
+--- nv.d3
+--- owl.carousel
+--- perfect-scrollbar
+--- quill.bubble
+--- quill.snow
+--- responsive.bootstrap
+--- richtext
+--- select2.min
+--- sidebar
+--- smart_wizard
+--- smart_wizard_theme_arrows
+--- smart_wizard_theme_circles
+--- smart_wizard_theme_dots
+--- spectrum
+--- star-rating-svg
+--- summernote
+--- sumoselect
+--- sweetalert
+--- tabs
+--- timeline
+--- treeview
+*/
+
+@import "variables";
+/* ######## plugins-STYLES ######## */
+
+@import "plugins/accordion";
+@import "plugins/autoFill.bootstrap5.min";
+@import "plugins/bootstrap-datepicker";
+@import "plugins/buttons.bootstrap5";
+@import "plugins/c3-chart";
+@import "plugins/calendar";
+@import "plugins/classic";
+@import "plugins/dataTables.bootstrap";
+@import "plugins/dataTables.dateTime.min";
+@import "plugins/date-picker";
+@import "plugins/daterangepicker";
+@import "plugins/dtree";
+@import "plugins/edit-table";
+@import "plugins/fancy_fileupload";
+@import "plugins/fileupload";
+@import "plugins/form-wizard-demo";
+@import "plugins/froala-editor";
+@import "plugins/fullcalendar";
+@import "plugins/gallery";
+@import "plugins/intlTelInput";
+@import "plugins/ion.rangeSlider";
+@import "plugins/ion.rangeSlider.skinFlat";
+@import "plugins/ion.rangeSlider.skinSimple";
+@import "plugins/jquery.countdown";
+@import "plugins/jquery.growl";
+@import "plugins/jquery.timepicker";
+@import "plugins/jquery.transfer";
+@import "plugins/jquery-jvectormap";
+@import "plugins/jquerysctipttop";
+@import "plugins/jquerytransfer-icon_font";
+@import "plugins/keyTable.dataTables.min";
+@import "plugins/jquery-ui";
+@import "plugins/leaflet";
+@import "plugins/monolith";
+@import "plugins/morris";
+@import "plugins/multi";
+@import "plugins/multiple-select";
+@import "plugins/nano";
+@import "plugins/notifIt";
+@import "plugins/nv.d3";
+@import "plugins/owl.carousel";
+@import "plugins/perfect-scrollbar";
+@import "plugins/quill.bubble";
+@import "plugins/quill.snow";
+@import "plugins/responsive.bootstrap";
+@import "plugins/richtext";
+@import "plugins/select2.min";
+@import "plugins/sidebar";
+@import "plugins/smart_wizard";
+@import "plugins/smart_wizard_theme_arrows";
+@import "plugins/smart_wizard_theme_circles";
+@import "plugins/smart_wizard_theme_dots";
+@import "plugins/spectrum";
+@import "plugins/star-rating-svg";
+@import "plugins/summernote";
+@import "plugins/sumoselect";
+@import "plugins/sweetalert";
+@import "plugins/tabs";
+@import "plugins/timeline";
+@import "plugins/treeview";

@@ -1,0 +1,668 @@
+// ----- DOUBLE-MENU-TABS -------//
+.double-menu-tabs {
+  @media (min-width:992px) {
+    &.app {
+
+      .sidetab-menu .main-chat-list .media:hover,
+      .main-chat-list .media:focus {
+        background: transparent !important;
+      }
+
+      .main-chat-list .media.new {
+        background: transparent !important;
+      }
+
+      .side-badge {
+        display: none;
+      }
+
+      .side-menu .side-menu__icon {
+        color: $default-color;
+      }
+
+      .sidetab-menu .tabs-menu ul li a {
+        border-radius: 7px;
+      }
+
+      ul.double-menu-active li .panel-tabs:hover {
+        display: flex;
+      }
+
+      .slide .side-menu__item:hover+.slide-menu {
+        visibility: hidden;
+      }
+
+      .app-sidebar {
+        position: fixed !important;
+        overflow: visible !important;
+        inset-inline-start: 0;
+        width: 80px !important;
+      }
+
+      .main-content {
+        min-height: 1300px;
+      }
+
+      .side-menu__label {
+        display: none !important;
+        font-size: 11px !important;
+        white-space: nowrap;
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        inset-inline-start: 0;
+        color: $default-color;
+        opacity: 1;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .side-menu-label1 {
+        display: block !important;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 5px 15px !important;
+        width: 200px;
+        margin-block-start: -64px;
+
+        a {
+          color: $default-color !important;
+        }
+      }
+
+      .side-menu__icon {
+        margin-inline-end: 0;
+        margin-inline-start: 0;
+        margin: 0 auto !important;
+      }
+
+      .app-header {
+        padding-inline-start: 380px !important;
+      }
+
+      .side-header {
+        width: 80px;
+        padding: 10px;
+
+        .light-logo1 {
+          display: none !important;
+        }
+
+        .light-logo {
+          display: block !important;
+          text-align: center;
+        }
+      }
+
+      .app-content {
+        margin-inline-start: 380px;
+      }
+
+      .app-sidebar__overlay {
+        visibility: hidden;
+      }
+
+      .slide.is-expanded .slide-menu {
+        display: none;
+      }
+
+      .slide .slide-menu {
+        position: absolute;
+        inset-inline-start: 80px;
+        min-width: 300px;
+        opacity: 1;
+        z-index: 9999;
+        visibility: hidden;
+        inset-block-start: 0;
+        display: block;
+        max-height: inherit;
+      }
+
+      &.sidenav-toggled .slide .slide-menu {
+        position: absolute;
+        visibility: hidden;
+      }
+
+      .ps>.ps__rail-y {
+        display: none !important;
+      }
+
+      .slide-menu {
+        padding-inline-start: 0 !important;
+        position: absolute;
+        background: $white;
+        opacity: 1;
+        visibility: hidden;
+        z-index: 999;
+        inset-inline-start: 80px;
+        width: 300px;
+        transition: none !important;
+        display: block !important;
+        box-shadow: none;
+        inset-block-start: 0;
+      }
+
+      .slide .slide-menu.double-menu-active {
+        visibility: visible !important;
+        display: block !important;
+        height: 100% !important;
+        position: absolute;
+        inset-block-start: 0;
+        padding: 20px 20px !important;
+        border-radius: 0 !important;
+        border-block-start: 0;
+        overflow: hidden scroll;
+        border-inline-end: 1px solid $border;
+      }
+
+      .sub-category {
+        display: none !important;
+      }
+
+      .side-menu .slide .side-menu__item.active {
+        display: block;
+        margin: 0 auto !important;
+        padding: 10px !important;
+        border-radius: 7px;
+        text-align: center;
+      }
+
+      .side-menu .slide .side-menu__item {
+        display: block;
+        padding: 10px !important;
+        border-radius: 7px;
+        text-align: center;
+
+        i.angle {
+          display: none;
+        }
+      }
+
+      .slide-item {
+        padding-block: 10px;
+        padding-inline-start: 15px;
+        padding-inline-end: 15px;
+      }
+
+      .sub-side-menu__item {
+        padding-block: 10px;
+        padding-inline-start: 15px !important;
+        padding-inline-end: 15px !important;
+      }
+
+      .app-sidebar .slide {
+        position: inherit;
+        display: block;
+      }
+
+      &.sidenav-toggled {
+        .app-header {
+          padding-inline-start: 80px !important;
+        }
+
+        .app-content {
+          margin-inline-start: 80px;
+        }
+      }
+
+      .app-sidebar .slide-menu .side-menu-label1 a:before {
+        content: none;
+      }
+
+      .slide-menu .tabs-menu ul li a {
+        padding: 10px;
+        margin: 3px;
+        text-align: center;
+        border: 1px solid $border;
+        color: #74829c;
+        width: 120px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tabs-menu,
+      .side-account,
+      .latest-timeline {
+        a:before {
+          content: none
+        }
+      }
+
+      .slide-menu .sidetab-menu .panel-tabs li a {
+
+        &.active,
+        &:hover {
+          background: $primary-1;
+          color: $white !important;
+          border: 1px solid $primary-1;
+          position: relative;
+
+          p {
+            color: $white;
+          }
+        }
+
+        p {
+          margin-block-end: 0;
+          font-size: 14px;
+        }
+      }
+
+      .sidetab-menu {
+
+        .menutabs-content,
+        .tab-menu-heading {
+          display: block;
+          padding-inline: 15px;
+        }
+      }
+
+      .side-account li {
+        padding: 7px 0;
+        font-size: 14px;
+
+        a {
+          color: $default-color;
+        }
+      }
+
+      .sidemenu-list {
+        padding-block-start: 80px;
+      }
+
+      .app-sidebar {
+        .main-sidemenu {
+
+          .tab-content>.tab-pane {
+            display: none !important;
+          }
+
+          .tab-content>.tab-pane.active {
+            display: block !important;
+          }
+        }
+      }
+
+      .app-sidebar .main-sidemenu #side1,
+      .app-sidebar .main-sidemenu #side5,
+      .app-sidebar .main-sidemenu #side9,
+      .app-sidebar .main-sidemenu #side13,
+      .app-sidebar .main-sidemenu #side17,
+      .app-sidebar .main-sidemenu #side21,
+      .app-sidebar .main-sidemenu #side25,
+      .app-sidebar .main-sidemenu #side29,
+      .app-sidebar .main-sidemenu #side33,
+      .app-sidebar .main-sidemenu #side37 {
+        display: none !important;
+      }
+
+      .app-sidebar .main-sidemenu #side1.active,
+      .app-sidebar .main-sidemenu #side5.active,
+      .app-sidebar .main-sidemenu #side9.active,
+      .app-sidebar .main-sidemenu #side13.active,
+      .app-sidebar .main-sidemenu #side17.active,
+      .app-sidebar .main-sidemenu #side21.active,
+      .app-sidebar .main-sidemenu #side25.active,
+      .app-sidebar .main-sidemenu #side29.active,
+      .app-sidebar .main-sidemenu #side33.active,
+      .app-sidebar .main-sidemenu #side37.active {
+        .sidemenu-list {
+          display: block !important;
+        }
+      }
+
+      .app-sidebar .main-sidemenu #side1.active,
+      .app-sidebar .main-sidemenu #side5.active,
+      .app-sidebar .main-sidemenu #side9.active,
+      .app-sidebar .main-sidemenu #side13.active,
+      .app-sidebar .main-sidemenu #side17.active,
+      .app-sidebar .main-sidemenu #side21.active,
+      .app-sidebar .main-sidemenu #side25.active,
+      .app-sidebar .main-sidemenu #side29.active,
+      .app-sidebar .main-sidemenu #side33.active,
+      .app-sidebar .main-sidemenu #side37.active,
+      .app-sidebar .main-sidemenu #side2.active,
+      .app-sidebar .main-sidemenu #side3.active,
+      .app-sidebar .main-sidemenu #side4.active,
+      .app-sidebar .main-sidemenu #side6.active,
+      .app-sidebar .main-sidemenu #side7.active,
+      .app-sidebar .main-sidemenu #side8.active,
+      .app-sidebar .main-sidemenu #side10.active,
+      .app-sidebar .main-sidemenu #side11.active,
+      .app-sidebar .main-sidemenu #side12.active,
+      .app-sidebar .main-sidemenu #side14.active,
+      .app-sidebar .main-sidemenu #side15.active,
+      .app-sidebar .main-sidemenu #side16.active,
+      .app-sidebar .main-sidemenu #side18.active,
+      .app-sidebar .main-sidemenu #side19.active,
+      .app-sidebar .main-sidemenu #side20.active,
+      .app-sidebar .main-sidemenu #side22.active,
+      .app-sidebar .main-sidemenu #side23.active,
+      .app-sidebar .main-sidemenu #side24.active,
+      .app-sidebar .main-sidemenu #side26.active,
+      .app-sidebar .main-sidemenu #side27.active,
+      .app-sidebar .main-sidemenu #side28.active,
+      .app-sidebar .main-sidemenu #side30.active,
+      .app-sidebar .main-sidemenu #side31.active,
+      .app-sidebar .main-sidemenu #side32.active,
+      .app-sidebar .main-sidemenu #side34.active,
+      .app-sidebar .main-sidemenu #side35.active,
+      .app-sidebar .main-sidemenu #side36.active,
+      .app-sidebar .main-sidemenu #side38.active,
+      .app-sidebar .main-sidemenu #side39.active,
+      .app-sidebar .main-sidemenu #side40.active {
+        display: block !important;
+      }
+
+      .double-menu-active {
+        .panel-tabs {
+          display: flex !important;
+        }
+      }
+
+    }
+
+    &.dark-mode {
+      .slide-menu {
+        background: $dark-theme-1;
+        border-color: $border-dark !important;
+      }
+
+      .Annoucement_card {
+        border-color: $border-dark;
+      }
+
+      .slide-menu .tabs-menu ul li a {
+        border-color: $border-dark;
+        color: $white;
+      }
+
+      .side-header .light-logo,
+      .side-header .desktop-logo {
+        display: none !important;
+      }
+
+      .side-header .toggle-logo {
+        display: block !important;
+      }
+
+      .side-menu-label1 a {
+        color: $white !important;
+      }
+    }
+
+    &.transparent-mode {
+      .slide-menu {
+        background: rgba(0, 0, 0, 0.1) !important;
+        backdrop-filter: blur(20px);
+        border-color: $transparent-border !important;
+      }
+
+      .Annoucement_card {
+        border-color: $transparent-border !important;
+      }
+
+      .slide-menu .tabs-menu ul li a {
+        border-color: $white-1 !important;
+        color: $white;
+      }
+
+      .side-header .light-logo,
+      .side-header .desktop-logo {
+        display: none !important;
+      }
+
+      .side-header .toggle-logo {
+        display: block !important;
+      }
+
+      .side-menu-label1 a {
+        color: $white !important;
+      }
+    }
+
+    &.light-menu {
+      .slide-menu {
+        background: $white !important;
+        border-color: $border !important;
+      }
+
+      .slide-menu .tabs-menu-body .tab-pane h5 {
+        color: $default-color !important;
+      }
+
+      .slide-menu .tabs-menu ul li a {
+        border-color: $border !important;
+        color: #74829c;
+      }
+
+      .slide-menu {
+        .Annoucement_card {
+          .subtext {
+            color: $default-color;
+          }
+        }
+
+        .main-chat-list {
+
+          .media.new .media-contact-name span:first-child {
+            color: #404c6d;
+          }
+
+          .media-contact-name span:last-child {
+            color: #76839a;
+          }
+
+          .media-body p {
+            color: #76839a;
+          }
+        }
+      }
+
+      .side-header .header-brand1 .header-brand-img.toggle-logo,
+      .side-header .header-brand1 .header-brand-img.desktop-logo,
+      .side-header .header-brand1 .header-brand-img.light-logo1 {
+        display: none !important;
+      }
+
+      .side-header .light-logo {
+        display: block !important;
+      }
+
+      .side-menu-label1 a {
+        color: $default-color !important;
+      }
+    }
+
+    &.color-menu {
+      .slide-menu {
+        background: $primary-1 !important;
+        border-color: $white-1 !important;
+      }
+
+      .slide-menu .sidetab-menu .panel-tabs li a.active,
+      .slide-menu .sidetab-menu .panel-tabs li a:hover {
+        background: $black-1;
+      }
+
+      .slide-menu .main-chat-list .media.new .media-body p {
+        color: $white-5;
+      }
+
+      .slide-menu .tabs-menu ul li a {
+        border-color: $white-1 ;
+        color: $white;
+      }
+
+      .slide-menu .main-chat-list .media-contact-name span:last-child {
+        color: $white-7;
+      }
+
+      .slide-menu .main-chat-list .media.new .media-contact-name span:first-child {
+        color: $white;
+      }
+
+      .slide-menu .tabs-menu-body .tab-pane h5 {
+        color: $white !important;
+      }
+
+      .Annoucement_card {
+        border-color: $white-1;
+
+        .subtext {
+          color: $white-7;
+        }
+
+        .btn-primary {
+          background: $black-1 !important;
+          border-color: $black-1 !important;
+        }
+      }
+
+      .side-header .header-brand1 .header-brand-img.light-logo,
+      .side-header .header-brand1 .header-brand-img.desktop-logo,
+      .side-header .header-brand1 .header-brand-img.light-logo1 {
+        display: none !important;
+      }
+
+      .side-header .toggle-logo {
+        display: block !important;
+      }
+
+      .side-menu-label1 a {
+        color: $white !important;
+      }
+    }
+
+    &.dark-menu {
+      .slide-menu {
+        background: $dark-theme-1 !important;
+        border-color: $border-dark !important;
+      }
+
+      .slide-menu .tabs-menu ul li a {
+        border-color: $border-dark;
+      }
+
+      .slide-menu .tabs-menu-body .tab-pane h5 {
+        color: $white !important;
+      }
+
+      .slide-menu .main-chat-list .media-contact-name span:last-child {
+        color: #9595b5;
+      }
+
+      .slide-menu .main-chat-list .media.new .media-body p {
+        color: #8f9cc0;
+      }
+
+      .slide-menu .main-chat-list .media.new .media-contact-name span:first-child {
+        color: #dedefd;
+      }
+
+      .Annoucement_card {
+        border-color: $border-dark;
+      }
+
+      .side-header .header-brand1 .header-brand-img.light-logo,
+      .side-header .header-brand1 .header-brand-img.desktop-logo,
+      .side-header .header-brand1 .header-brand-img.light-logo1 {
+        display: none !important;
+      }
+
+      .side-header .toggle-logo {
+        display: block !important;
+      }
+
+      .side-menu-label1 a {
+        color: $white !important;
+      }
+    }
+
+    &.gradient-menu {
+      .slide-menu {
+        background: linear-gradient(to right, $primary-1 0%, #8e77fa 100%) !important;
+        border-color: $white-1 !important;
+      }
+
+      .slide-menu .sidetab-menu .panel-tabs li a.active,
+      .slide-menu .sidetab-menu .panel-tabs li a:hover {
+        background: $black-1;
+      }
+
+      .slide-menu .main-chat-list .media.new .media-body p {
+        color: $white-5;
+      }
+
+      .slide-menu .tabs-menu ul li a {
+        border-color: $white-1 ;
+        color: $white;
+      }
+
+      .slide-menu .main-chat-list .media-contact-name span:last-child {
+        color: $white-7;
+      }
+
+      .slide-menu .main-chat-list .media.new .media-contact-name span:first-child {
+        color: $white;
+      }
+
+      .slide-menu .tabs-menu-body .tab-pane h5 {
+        color: $white !important;
+      }
+
+      .Annoucement_card {
+        border-color: $white-1;
+
+        .subtext {
+          color: $white-7;
+        }
+
+        .btn-primary {
+          background: $black-1 !important;
+          border-color: $black-1 !important;
+        }
+      }
+
+      .side-header .header-brand1 .header-brand-img.light-logo,
+      .side-header .header-brand1 .header-brand-img.desktop-logo,
+      .side-header .header-brand1 .header-brand-img.light-logo1 {
+        display: none !important;
+      }
+
+      .side-header .toggle-logo {
+        display: block !important;
+      }
+
+      .side-menu-label1 a {
+        color: $white !important;
+      }
+    }
+
+
+    &.scrollable-layout .app-sidebar {
+      position: absolute !important;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1210px) {
+
+    #navbarSupportedContent-4 {
+
+      .full-screen-link,
+      .country {
+        display: none !important;
+      }
+    }
+  }
+
+  .Annoucement_card {
+    padding: 20px;
+    border-radius: 7px;
+    border: 1px solid $border;
+    background: $primary-03;
+  }
+}
+
+// -----! DOUBLE-MENU-TABS -------//

@@ -1,0 +1,17 @@
+.closed-leftmenu {
+    @media (min-width: 992px) {
+        &.sidebar-mini.sidenav-toggled .app-sidebar {
+            inset-inline-start: 0;
+            width: 80px;
+            overflow: hidden;
+            display: none;
+        }
+
+        &.sidebar-mini.sidenav-toggled .app-header.header {
+            padding-inline-start: 30px;
+        }
+        &.sidebar-mini.sidenav-toggled .app-content {
+            margin-inline-start: 0 ;
+        }
+    }
+}
