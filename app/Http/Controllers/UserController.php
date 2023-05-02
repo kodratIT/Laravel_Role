@@ -13,7 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('pages.users.index');
+        $breadcrumb = "Users";
+        return view('pages.users.index',compact('breadcrumb'));
     }
 
     /**

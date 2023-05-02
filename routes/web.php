@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
 Route::middleware(['auth','role:admin'])->name('admin.')->prefix('admin')->group(function(){
     Route::resource('/roles',RolesController::class);

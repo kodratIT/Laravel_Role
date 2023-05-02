@@ -23,7 +23,7 @@
                     <h3>Main</h3>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{route('dashboard')}}"><i
                             class="side-menu__icon fe fe-home"></i><span
                             class="side-menu__label">Dashboard</span></a>
                 </li>
@@ -32,7 +32,7 @@
                     <h3>Administrator</h3>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="#"><i
                             class="side-menu__icon fe fe-database"></i><span
                             class="side-menu__label">Data Master</span><i
                             class="angle fe fe-chevron-right"></i>
@@ -53,7 +53,7 @@
                     </ul>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="#"><i
                             class="side-menu__icon fe fe-lock"></i><span
                             class="side-menu__label">User Access</span><i
                             class="angle fe fe-chevron-right"></i>
@@ -75,7 +75,7 @@
                     </ul>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html"><i
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="#"><i
                             class="side-menu__icon fe fe-settings"></i><span
                             class="side-menu__label">Setting</span><i
                             class="angle fe fe-chevron-right"></i>

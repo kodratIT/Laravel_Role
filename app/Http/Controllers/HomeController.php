@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages/index');
+        $breadcrumb = "Dashboard";
+        return view('pages.index',compact('breadcrumb'));
     }
 }

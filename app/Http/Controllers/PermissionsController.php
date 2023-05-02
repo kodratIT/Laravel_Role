@@ -13,7 +13,8 @@ class PermissionsController extends Controller
      */
     public function index()
     {
-       return view('pages.permissions.index');
+        $breadcrumb = "Permissions";
+       return view('pages.permissions.index',compact('breadcrumb'));
     }
 
     /**
