@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class RolesController extends Controller
 {
@@ -13,8 +15,9 @@ class RolesController extends Controller
      */
     public function index()
     {
+        $roles = Role::all();
         $breadcrumb = "Roles";
-        return view('pages.roles.index',compact('breadcrumb'));
+        return view('pages.roles.index',compact('breadcrumb','roles'));
     }
 
     /**
@@ -24,7 +27,9 @@ class RolesController extends Controller
      */
     public function create()
     {
-        //
+        $breadcrumb = "Create Roles";
+
+        return view('pages.roles.create',compact('breadcrumb'));
     }
 
     /**
@@ -35,7 +40,13 @@ class RolesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        Role::create($validated);
+
+        return to_route('admin.roles.index')->with('massage','Roles Create Acepted');
     }
 
     /**
@@ -57,7 +68,9 @@ class RolesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $role = Role::find($id);
+        $breadcrumb = "Roles";
+        return view('pages.roles.edit',compact('role','breadcrumb'));
     }
 
     /**
@@ -69,7 +82,13 @@ class RolesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        Role::where('id',$id)->update($validated);
+
+        return to_route('admin.roles.index');
     }
 
     /**
@@ -80,6 +99,10 @@ class RolesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $role = Role::find($id);
+
+        $role->delete();
+
+        return  to_route('admin.roles.index');
     }
 }

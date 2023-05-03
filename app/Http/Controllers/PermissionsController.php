@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class PermissionsController extends Controller
 {
@@ -13,8 +15,9 @@ class PermissionsController extends Controller
      */
     public function index()
     {
+        $permissions = Permission::all();
         $breadcrumb = "Permissions";
-       return view('pages.permissions.index',compact('breadcrumb'));
+        return view('pages.permissions.index',compact('breadcrumb','permissions'));
     }
 
     /**
@@ -24,7 +27,8 @@ class PermissionsController extends Controller
      */
     public function create()
     {
-        //
+        $breadcrumb = "Permissions";
+        return view('pages.permissions.create',compact('breadcrumb'));
     }
 
     /**
@@ -35,7 +39,13 @@ class PermissionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        Permission::create($validated);
+
+        return to_route('admin.permissions.index');
     }
 
     /**
@@ -57,7 +67,11 @@ class PermissionsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $permission = Permission::find($id);
+        $breadcrumb = 'Permissions';
+
+        return view('pages.permissions.edit',compact('permission','breadcrumb'));
+
     }
 
     /**
@@ -69,7 +83,13 @@ class PermissionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        Permission::where('id',$id)->update($validated);
+
+        return to_route('admin.permissions.index');
     }
 
     /**
@@ -80,6 +100,10 @@ class PermissionsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $permission = Permission::find($id);
+
+        $permission->delete();
+
+        return to_route('admin.permissions.index');
     }
 }

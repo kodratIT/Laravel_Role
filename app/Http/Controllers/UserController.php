@@ -1,8 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Spatie\Permission\Models\Role;
+
+
+use function PHPUnit\Framework\returnValue;
 
 class UserController extends Controller
 {
@@ -13,8 +18,9 @@ class UserController extends Controller
      */
     public function index()
     {
+        $users = User::all();
         $breadcrumb = "Users";
-        return view('pages.users.index',compact('breadcrumb'));
+        return view('pages.users.index',compact('breadcrumb','users'));
     }
 
     /**
@@ -46,7 +52,11 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+       $user = User::find($id);
+       $roles = Role::all();
+       $breadcrumb = "user";
+
+       return view('pages.users.show',compact('user','breadcrumb','roles'));
     }
 
     /**
@@ -81,5 +91,25 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function assignRole(Request $request,User $user ){
+        if($user->hasRole($request->role)){
+            return back()->with('message','Role exists');
+        }
+
+        $user->assignRole($request->role);
+        return back()->with('message','Role Assigmed');
+        
+    }
+
+    public function removeRole(User $user,Role $role){
+        if($user->hasRole($role)){
+            $user->removeRole($role);
+            return back()->with('message','Role removed');
+
+        }
+
+        return back()->with('message','Role no exists');
     }
 }

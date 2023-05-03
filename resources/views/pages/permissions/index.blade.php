@@ -10,32 +10,35 @@
                         <h3 class="card-title">Permissions</h3>
                     </div>
                     <div class="card-body">
-                        <button id="table2-new-row-button " class="btn btn-primary mb-4 "> Add New</button>
+                        <a  id="table2-new-row-button " class="btn btn-primary mb-4"  href="{{route('admin.permissions.create')}}">Add New </a>
                         <div class="table-responsive text-center">
                             <table class="table table-bordered border text-nowrap mb-0 " id="new-edit">
                                 <thead class="text-center">
                                     <tr>
                                         <th>No</th>
-                                        <th>Name</th>
-                                        <th>E-mail</th>
-                                        <th>Role</th>
-                                        <th>Start date</th>
+                                        <th>Permissions</th>
+                                        <th>Guard Name</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($permissions as $permission)
+                                        
                                     <tr>
-                                        <td>1</td>
-                                        <td>Kodrat Pamungkas</td>
-                                        <td>kodratcoc@gmail.com</td>
-                                        <td>Super Admin</td>
-                                        <td>19/11/2001</td>
-                                        <td class="text-center align-middle">
-                                            <button class="btn btn-sm btn-primary badge " type="button"><i class="fe fe-edit"></i></button> 
-                                            <button class="btn btn-sm btn-danger badge" type="button"><i class="fa fa-trash"></i></button>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{$permission->name}}</td>
+                                        <td>{{$permission->guard_name}}</td>
+                                        <td class="d-flex justify-content-center border-0">
+                                            <a href="{{route('admin.permissions.edit',$permission->id)}}" class="btn btn-sm btn-primary badge  mx-2"><i class="fe fe-edit"></i></a>
+                                            <form action="{{route('admin.permissions.destroy',$permission->id)}}" method="post" class="inline-block">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-sm btn-danger badge " type="submit" name="action"><i class="fa fa-trash"></i></button>
+                                            </form>
                                         </td>
                                     </tr>
-                                   
+                                    @endforeach
+                                    
                                 </tbody>
                             </table>
                         </div>

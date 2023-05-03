@@ -9,8 +9,8 @@
                     <div class="card-header">
                         <h3 class="card-title">Users</h3>
                     </div>
+                    
                     <div class="card-body">
-                        <button id="table2-new-row-button " class="btn btn-primary mb-4 "> Add New</button>
                         <div class="table-responsive text-center">
                             <table class="table table-bordered border text-nowrap mb-0 " id="new-edit">
                                 <thead class="text-center">
@@ -18,23 +18,28 @@
                                         <th>No</th>
                                         <th>Name</th>
                                         <th>E-mail</th>
-                                        <th>Role</th>
-                                        <th>Start date</th>
+                                        <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($users as $user)
+                                        
                                     <tr>
-                                        <td>1</td>
-                                        <td>Kodrat Pamungkas</td>
-                                        <td>kodratcoc@gmail.com</td>
-                                        <td>Super Admin</td>
-                                        <td>19/11/2001</td>
-                                        <td class="text-center align-middle">
-                                            <button class="btn btn-sm btn-primary badge " type="button"><i class="fe fe-edit"></i></button> 
-                                            <button class="btn btn-sm btn-danger badge" type="button"><i class="fa fa-trash"></i></button>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->email}}</td>
+                                        <td>{{$user->created_at}}</td>
+                                        <td class="d-flex justify-content-center border-0">
+                                            <a href="{{route('admin.users.show',$user->id)}}" class="btn btn-sm btn-primary badge  mx-2"><i class="fe fe-edit"></i></a>
+                                            <form action="{{route('admin.roles.destroy',$user->id)}}" method="post" class="inline-block">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-sm btn-danger badge " type="submit" name="action"><i class="fa fa-trash"></i></button>
+                                            </form>
                                         </td>
                                     </tr>
+                                    @endforeach
                                    
                                 </tbody>
                             </table>
