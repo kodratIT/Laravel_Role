@@ -33,7 +33,15 @@
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$role->name}}</td>
-                                        <td></td>
+                                        <td>
+                                            @if ($role->permissions )
+                                            <div class="d-flex">
+                                                    @foreach ($role->permissions as $role_permission)
+                                                        <div class=" btn-sm btn-success  mx-2">{{$role_permission->name}}</div>
+                                                    @endforeach
+                                                </div>
+                                            @endif
+                                        </td>
                                         <td class="d-flex justify-content-center border-0">
                                             <a href="{{route('admin.roles.edit',$role->id)}}" class="btn btn-sm btn-primary badge  mx-2"><i class="fe fe-edit"></i></a>
                                             <form action="{{route('admin.roles.destroy',$role->id)}}" method="post" class="inline-block">

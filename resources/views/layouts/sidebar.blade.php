@@ -31,6 +31,7 @@
                 <li class="sub-category">
                     <h3>Administrator</h3>
                 </li>
+                @can('data.master')
                 <li class="slide">
                     <a class="side-menu__item has-link" data-bs-toggle="slide" href="#"><i
                             class="side-menu__icon fe fe-database"></i><span
@@ -52,6 +53,9 @@
                         </li>
                     </ul>
                 </li>
+                @endcan
+
+                @can('manage.access')
                 <li class="slide">
                     <a class="side-menu__item has-link" data-bs-toggle="slide" href="#"><i
                             class="side-menu__icon fe fe-lock"></i><span
@@ -73,6 +77,10 @@
                             </div>
                         </li>
                     </ul>
+                </li>
+                @endcan
+                <li class="sub-category">
+                    <h3>More Tools</h3>
                 </li>
                 <li class="slide">
                     <a class="side-menu__item has-link" data-bs-toggle="slide" href="#"><i

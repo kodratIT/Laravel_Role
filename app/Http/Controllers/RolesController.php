@@ -69,8 +69,9 @@ class RolesController extends Controller
     public function edit($id)
     {
         $role = Role::find($id);
+        $permissions = Permission::all();
         $breadcrumb = "Roles";
-        return view('pages.roles.edit',compact('role','breadcrumb'));
+        return view('pages.roles.edit',compact('role','breadcrumb','permissions'));
     }
 
     /**
@@ -104,5 +105,29 @@ class RolesController extends Controller
         $role->delete();
 
         return  to_route('admin.roles.index');
+    }
+
+    public function givePermission(Request $request, Role $role ){
+
+        if($role->hasPermissionTo($request->permission)){
+            return back()->with('message','Permission Exists'); 
+        }
+
+        $role->givePermissionTo($request->permission);
+        return back()->with('message','Permission Added'); 
+        
+    }
+
+    public function revokePermission(Role $role,Permission $permission ){
+
+        if($role->hasPermissionTo($permission)){
+            
+            $role->revokePermissionTo($permission);
+
+            return back()->with('message','Permission deleted'); 
+        }
+
+        return back()->with('message','Permission not exists'); 
+        
     }
 }

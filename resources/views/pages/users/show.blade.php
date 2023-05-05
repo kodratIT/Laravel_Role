@@ -46,7 +46,7 @@
 
                                                 @endforeach
                                                 @if (!isset($user_role))
-                                                <select name="role" id="role" class="form-control mt-4">
+                                                <select name="role" id="role" class="form-control mt-4  ">
                                                     <option disabled selected>Choses Role</option>
                                                     @foreach ($roles as $role)
                                                     <option value="{{$role->name}}">{{$role->name}}</option>

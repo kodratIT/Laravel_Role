@@ -24,7 +24,7 @@ Auth::routes();
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
-Route::middleware(['auth','role:admin'])->name('admin.')->prefix('admin')->group(function(){
+Route::middleware(['auth','role:super-admin'])->name('admin.')->prefix('admin')->group(function(){
     Route::resource('/roles',RolesController::class);
     Route::post('/roles/{role}/permissions',[RolesController::class,'givePermission'])->name('roles.permissions');
     Route::delete('/roles/{role}/permissions/{permission}',[RolesController::class,'revokePermission'])->name('roles.permissions.revoke');

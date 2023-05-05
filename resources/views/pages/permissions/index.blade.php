@@ -16,8 +16,9 @@
                                 <thead class="text-center">
                                     <tr>
                                         <th>No</th>
-                                        <th>Permissions</th>
+                                        <th>Permission</th>
                                         <th>Guard Name</th>
+                                        <th>Roles</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -28,6 +29,13 @@
                                         <td>{{$loop->iteration}}</td>
                                         <td>{{$permission->name}}</td>
                                         <td>{{$permission->guard_name}}</td>
+                                        <td>@if ($permission->roles )
+                                            <div class="d-flex">
+                                                    @foreach ($permission->roles as $permission_role)
+                                                        <div class=" btn-sm btn-success  mx-2">{{$permission_role->name}}</div>
+                                                    @endforeach
+                                                </div>
+                                            @endif</td>
                                         <td class="d-flex justify-content-center border-0">
                                             <a href="{{route('admin.permissions.edit',$permission->id)}}" class="btn btn-sm btn-primary badge  mx-2"><i class="fe fe-edit"></i></a>
                                             <form action="{{route('admin.permissions.destroy',$permission->id)}}" method="post" class="inline-block">
